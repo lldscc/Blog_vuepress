@@ -11,7 +11,8 @@ bannerBrand:
   title: llds-Blog
   description: 刚刚开始，一切都会如约而至！
   buttons:
-    - { text: Blog, link: '/posts/', icon: 'Earth'}
+    - { text: Blog, link: '/posts/', icon: 'Book'}
+    - { text: 个人网站, link: 'https://llds.cc', icon: 'Earth'}
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/lldscc' }
     - { icon: 'LogoGithub', link: 'https://github.com/lldscc' }

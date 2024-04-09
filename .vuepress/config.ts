@@ -31,7 +31,7 @@ export default defineUserConfig({
       { text: "首页", icon:'Home', link: "/" },
       // { text: "分类", link: "/categories/reco/1/" },
       // { text: "标签", link: "/tags/tag1/1/" },
-      { text: '博客', icon:'Earth', link: '/posts'},
+      { text: '博客', icon:'Book', link: '/posts'},
       { text: '时间轴', link: '/timeline/', icon:'Time'},
 
       // {
