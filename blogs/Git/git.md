@@ -7,7 +7,7 @@ categories:
  - git
 ---
 
-## git常用命令1
+## git常用命令
 
 ```bash
 git init                 //在当前目录中初始化一个新的Git仓库。git init -b <分支名称> 
