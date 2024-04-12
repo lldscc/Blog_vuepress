@@ -5,6 +5,7 @@ import recoTheme from "vuepress-theme-reco";
 export default defineUserConfig({
   title: "llds_Blog",
   description: "Just playing around",
+  head: [['link', { rel: 'icon', href: '/logo.png' }]],
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
