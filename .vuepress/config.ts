@@ -3,6 +3,7 @@ import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
+  lang: "zh-CN",
   title: "llds_Blog",
   description: "Just playing around",
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
