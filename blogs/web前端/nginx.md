@@ -1,9 +1,20 @@
-# 安装
+---
+title: Nginx
+date: 2024/4/15
+tags:
+ - nginx
+categories:
+ - web前端
+---
+# Nginx
+
+## 安装
+
 ```bash
 yum install epel-release
 yum install nginx
 ```
-# 常用命令
+## 常用命令
 ```bash
 # 查看nginx版本
 nginx -v
@@ -28,8 +39,9 @@ nginx -s quit
 # 强制关闭 Nginx
 nginx -s stop
 ```
-# 配置
-```nginx
+## 配置
+
+```bash
 user nginx; # 定义 Nginx 的运行用户
 worker_processes auto; # 指定Nginx的工作进程数量。auto会根据可用的CPU核心数量自动设置。
 error_log /var/log/nginx/error.log;#  Nginx 的错误日志文件位置
@@ -85,8 +97,9 @@ http {
 
 }
 ```
-# 二级域名（https）
-```nginx
+二级域名（https）
+
+```js
 http {
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
@@ -151,26 +164,10 @@ http {
     }
 
 }
+
 ```
 
-[Nginx配置:配置多个二级域名](http://t.csdnimg.cn/5Hph5)
-重定向**return 301 https://$host$request_uri;**：**return** 指令用于向客户端返回一个 HTTP 响应。**301** 是 HTTP 状态码，表示永久重定向。**https://$host$request_uri** 是重定向的目标地址，其中 **$host** 表示用户请求的域名，**$request_uri** 表示用户请求的 URI（包含查询参数）
-# 其他配置
-## 防火墙设置
-```powershell
-systemctl start firewalld.service #开启防火墙
-firewall-cmd --permanent --zone=public --add-port=80/tcp #开启80端口
-firewall-cmd --reload #重启
-```
-## DNS域名解析
-## 端口设置
-安全组
-## 访问权限
-## SSL证书
-阿里云免费20个
-
-
-
+>  重定向**return 301 https://$host$request_uri;**：**return** 指令用于向客户端返回一个 HTTP 响应。**301** 是 HTTP 状态码，表示永久重定向。**https://$host$request_uri** 是重定向的目标地址，其中 **$host** 表示用户请求的域名，**$request_uri** 表示用户请求的 URI（包含查询参数）
 
 
 
