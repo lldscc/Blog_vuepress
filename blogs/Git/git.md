@@ -1,13 +1,14 @@
 ---
 title: git
 date: 2024/4/1
-tags:
- - git
 categories:
- - git
+ - 其他
+tags:
+ - Git
+
 ---
 
-## git常用命令2
+## git常用命令
 
 ```bash
 git init                 //在当前目录中初始化一个新的Git仓库。git init -b <分支名称> 

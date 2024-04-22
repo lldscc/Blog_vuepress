@@ -99,7 +99,7 @@ http {
 ```
 二级域名（https）
 
-```js
+```bash
 http {
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
@@ -107,7 +107,7 @@ http {
 
     access_log  /var/log/nginx/access.log  main;
 
-    sendfile            on;
+    sendfile           on;
     tcp_nopush          on;
     tcp_nodelay         on;
     keepalive_timeout   65;
@@ -164,7 +164,6 @@ http {
     }
 
 }
-
 ```
 
 >  重定向**return 301 https://$host$request_uri;**：**return** 指令用于向客户端返回一个 HTTP 响应。**301** 是 HTTP 状态码，表示永久重定向。**https://$host$request_uri** 是重定向的目标地址，其中 **$host** 表示用户请求的域名，**$request_uri** 表示用户请求的 URI（包含查询参数）
