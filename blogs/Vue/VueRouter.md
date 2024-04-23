@@ -20,19 +20,28 @@ categories:
 > [CSDN博客 vue-router 路由](http://t.csdnimg.cn/9ufuz)
 
 ## （二）安装vueRouter
-
+:::: code-group
+::: code-group-item Vue2
 ```bash
-# 默认安装最新版本 用于vue3项目
-npm install vue-router
-
 # 安装指定版本 用于vue2项目
 npm install vue-router@3.6.5
 ```
+:::
+::: code-group-item Vue3
+```bash
+# 默认安装最新版本 用于vue3项目
+npm install vue-router
+```
+:::
+::::
 
 ## （三）配置文件
 
 ### 1. 路由配置
 
+
+:::: code-group
+::: code-group-item Vue2
 ```javascript
 // 导入vue
 import Vue from 'vue'
@@ -66,9 +75,51 @@ export default new VueRouter({
   ],
 });
 ```
+:::
+::: code-group-item Vue3
+```javascript
+import { createRouter,createWebHistory} from "vue-router";  //导入createRouter createWebHistory
+import LoginVue from '@/views/Login.vue'
+import Layout from "@/views/Layout.vue";
+
+import ArticleCategory from '@/views/article/ArticleCategory.vue'
+import ArticleManage from '@/views/article/ArticleManage.vue'
+
+import UserAvatar from '@/views/user/UserAvatar.vue'
+import UserInfo from '@/views/user/UserInfo.vue'
+import UserResetPassword from '@/views/user/UserResetPassword.vue'
+
+const routes = [
+  { path:'/login',component:LoginVue},
+  {
+    path:'/',
+    component:Layout,
+    redirect:'/article/manage',
+    //     子路由
+    children:[
+      { path:'article/category',component:ArticleCategory},
+      { path:'article/manage',component:ArticleManage},
+      { path:'user/info',component:UserInfo},
+      { path:'user/avatar',component:UserAvatar},
+      { path:'user/password',component:UserResetPassword},
+    ]
+  }
+]
+
+const router = createRouter({
+  history:createWebHistory(),
+  routes
+});
+export default router;
+```
+:::
+::::
 
 ### 2. 注入vue根实例
 
+
+:::: code-group
+::: code-group-item Vue2
 ```javascript
 // 导入规则
 import router from './router'
@@ -78,6 +129,17 @@ const app = new Vue({
   router
 }).$mount('#app')
 ```
+:::
+::: code-group-item Vue3
+```javascript
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from '@/router'
+app.use(router)
+app.mount('#app')
+```
+:::
+::::
 
 ### 3. 路由规则常用的属性
 
