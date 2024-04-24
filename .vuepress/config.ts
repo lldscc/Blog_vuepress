@@ -9,7 +9,6 @@ export default defineUserConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
-    primaryColor: '#62c3ed',
     catalogTitle: '这是知识呀😲',
     logo: "/logo.png",
     author: "llds_顺",

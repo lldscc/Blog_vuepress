@@ -7,7 +7,7 @@ modules:
   - Footer
   - Features
 bannerBrand:
-  bgImage: '/01.png'
+  bgImage: '/bg.svg'
   title: llds-Blog
   description: 刚刚开始，一切都会如约而至！
   buttons:
