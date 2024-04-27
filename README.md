@@ -19,12 +19,13 @@ blog:
     - { icon: 'LogoGithub', link: 'https://github.com/lldscc' }
     - { icon: 'LogoGithub', link: 'https://space.bilibili.com/3546385475439476' }
     - { icon: 'Earth', link: 'https://llds.cc' }
+features:
+- title: Wish list
+  details: 做出炫酷、美观的网站
+- title: Insist on doing
+  details: 学习 
 
 footer:
-  record: 域名备案文案
-  recordLink: 域名备案地址
-  cyberSecurityRecord: 公安备案文案
-  cyberSecurityLink: 公安备案地址
   startYear: 2024
 isShowTitleInHome: true
 actionText: About
