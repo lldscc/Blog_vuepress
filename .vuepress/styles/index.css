@@ -1,3 +1,9 @@
 .footer-wrapper span:first-child .xicon-container {
   display: none;
 }
+.info .power{
+  display: none;
+}
+.page-container .page-meta{
+  justify-content:end;
+}
