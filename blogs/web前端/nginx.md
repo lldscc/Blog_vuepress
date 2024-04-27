@@ -1,6 +1,7 @@
 ---
 title: Nginx
 date: 2024/4/15
+hideComments: false
 tags:
  - nginx
 categories:

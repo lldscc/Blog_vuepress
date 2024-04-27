@@ -1,6 +1,7 @@
 ---
 title: github action部署
 date: 2024/4/22
+hideComments: false
 categories:
  - 部署
 tags:
